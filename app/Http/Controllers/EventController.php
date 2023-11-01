@@ -12,4 +12,9 @@ class EventController extends Controller
 
         return view('events.index');
     }
+    public function create()
+    {
+
+        // return redirect('events/index');
+    }
 }

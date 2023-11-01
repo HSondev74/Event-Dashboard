@@ -16,7 +16,7 @@ class LoginController extends Controller
                 ->first();
 
             if ($organizer) {
-                session('organizer', $organizer);
+                session(['organizer' => $organizer]);
 
                 return redirect('events/index');
             }
@@ -30,7 +30,7 @@ class LoginController extends Controller
 
     public function logout()
     {
-        session('organizer', null);
+        session(['organizer' => null]);
 
         return redirect('login');
     }

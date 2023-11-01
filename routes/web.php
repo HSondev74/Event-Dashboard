@@ -24,8 +24,8 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'index']);
 //logout
 
-Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 // events 
-Route::get('/events/index', [EventController::class, 'index']);
+Route::get('/events/index', [EventController::class, 'index'])->name('events.index');
