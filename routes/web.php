@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//login
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'index']);
+//logout
+
+Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+
+// events 
+Route::get('/events/index', [EventController::class, 'index']);
